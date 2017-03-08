@@ -100,7 +100,7 @@ static boolean IsSolved(int sudoku[][]){
              }
          }
 
-    //check if all cells satisfy the rules of sudoku
+    //check if all boxes satisfy the rules of sudoku
          for(int a=0;a<9;a=a+3){
              for(int b=0;b<9;b=b+3){
                  int[] freq=new int[10];
@@ -249,7 +249,7 @@ public void start(Stage primaryStage) throws Exception{
         for(int j=0;j<9;j++){
     if(IsSolved(arr)){
 
-    //if the puzzle has been solved,a new window is created and a 'you won' message is printed
+    //if the puzzle has been solved,a new window is created and a 'you have solved the puzzzle' message is printed with the accuracy
     Stage window2=new Stage();
     Label label=new Label("Congratulations!!!!"
             + " You have solved the puzzle\n"+"Your accuracy is : "+score.getText()+"%");
